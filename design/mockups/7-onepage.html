@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Direction 7 — One Page</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#fff;color:#000;font-family:"Times New Roman",Times,"Tiempos Text",serif;font-size:20px;line-height:1.45;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+header{display:flex;justify-content:space-between;align-items:baseline;padding:28px 40px;position:sticky;top:0;background:#fff;z-index:2}
+header .n{font-size:20px}
+header nav a{margin-left:28px;font-size:18px}
+header nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding:40px 40px 0;align-items:start}
+.grid img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:60% 35%;filter:grayscale(1);display:block}
+.grid .cap{font-size:14px;color:#777;margin-top:8px}
+.intro{position:sticky;top:110px}
+.intro h1{font-weight:400;font-size:clamp(40px,5vw,72px);line-height:1.02;margin:0 0 32px;letter-spacing:-.01em}
+.intro p{margin:0 0 18px;font-size:22px;max-width:34ch}
+.intro p a{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
+.intro .links{font-size:18px;margin-top:28px}
+.intro .links a{text-decoration:underline;text-underline-offset:4px;margin-right:16px}
+section.block{padding:90px 40px 0;display:grid;grid-template-columns:1fr 1fr;gap:40px}
+section.block h2{font-weight:400;font-size:20px;margin:0;position:sticky;top:110px;color:#000}
+section.block h2 small{display:block;color:#777;font-size:16px;margin-top:4px}
+.rows{margin:0;padding:0;list-style:none}
+.rows li{padding:14px 0;border-top:1px solid #000}
+.rows li:last-child{border-bottom:1px solid #000}
+.rows li a{display:block;font-size:24px;line-height:1.2}
+.rows li a:hover{font-style:italic}
+.rows li .d{display:block;color:#555;font-size:18px;margin-top:4px}
+.rows li .m{display:block;color:#777;font-size:15px;margin-top:6px;text-transform:uppercase;letter-spacing:.06em}
+footer{padding:90px 40px 40px;font-size:16px;color:#777;display:flex;justify-content:space-between}
+.badge{position:fixed;bottom:14px;right:14px;background:#000;color:#fff;font:12px system-ui;padding:6px 10px;letter-spacing:.08em;z-index:3}
+@media(max-width:820px){header{padding:18px 20px}header nav a{margin-left:14px;font-size:15px}.grid,section.block{grid-template-columns:1fr;padding-left:20px;padding-right:20px;gap:24px}.intro,section.block h2{position:static}section.block{padding-top:56px}.rows li a{font-size:21px}}
+</style></head><body>
+<header><span class="n">Sangeeta Singh-Kurtz</span><nav><a>About</a><a>Work</a><a>Speaking</a><a>Projects</a><a>Contact</a></nav></header>
+<div class="grid">
+  <div><img src="/images/about.webp" alt=""><div class="cap">Photograph by Nicholas Takahashi</div></div>
+  <div class="intro">
+    <h1>Writer &amp; journalist, Tokyo.</h1>
+    <p>Sangeeta Singh-Kurtz is a freelance journalist who investigates intriguing people. She was a staff writer at <a>New York Magazine</a> for five years. She lives in Tokyo, where she recently completed her debut novel.</p>
+    <div class="links"><a>Instagram</a><a>LinkedIn</a><a>Email</a></div>
+  </div>
+</div>
+<section class="block">
+  <h2>Features &amp; Investigations<small>The Cut · Vulture</small></h2>
+  <ul class="rows">
+    <li><a>At Thailand’s Real White Lotus Hotel, Where the Ultrarich Get Coddled</a><span class="d">“Sometimes they’ll ask us to bring the sun.”</span><span class="m">Vulture</span></li>
+    <li><a>The Chaos Inside Diddy’s Harlem Charter School</a><span class="d">Parents were drawn in by celebrity connections. Instead, their children faced violence and dysfunction.</span><span class="m">The Cut</span></li>
+    <li><a>The Man of Your Dreams</a><span class="d">For $300, Replika sells an AI companion who will never die, argue, or cheat — until his algorithm is updated.</span><span class="m">The Cut</span></li>
+    <li><a>The Big Dissolve</a><span class="d">They blew out their faces. Now they’re melting them down.</span><span class="m">The Cut</span></li>
+  </ul>
+</section>
+<section class="block">
+  <h2>Profiles<small>The Cut</small></h2>
+  <ul class="rows">
+    <li><a>Into the Dollhouse</a><span class="d">America Ferrera taught a generation of women to reject traditional beauty standards. So what’s she doing in the Barbie movie?</span><span class="m">The Cut · Cover</span></li>
+    <li><a>The Couple Behind the Skims-Industrial Complex</a><span class="d">A big chunk of the Kardashian family business rides on Emma and Jens Grede.</span><span class="m">The Cut</span></li>
+    <li><a>The Mythmaking of Matthew McConaughey</a><span class="d">The actor on his book <em>Greenlights</em>.</span><span class="m">The Cut</span></li>
+  </ul>
+</section>
+<section class="block">
+  <h2>Speaking<small>Panels · Podcasts · Broadcast</small></h2>
+  <ul class="rows">
+    <li><a>Do Dating Apps Really Want You to Find Love?</a><span class="m">Offline with Jon Favreau</span></li>
+    <li><a>How dating apps are more and more “gamified”</a><span class="m">Marketplace</span></li>
+    <li><a>Sex and dating in the pandemic</a><span class="m">NPR</span></li>
+  </ul>
+</section>
+<footer><span>© Sangeeta Singh-Kurtz</span><span>Instagram · LinkedIn</span></footer>
+<div class="badge">7 · ONE PAGE</div>
+</body></html>

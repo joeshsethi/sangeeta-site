@@ -1,49 +1,44 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import { site, nav } from "../content.js";
 
-const titles = {
-  "/": null,
-  "/work": "Work",
-  "/speaking": "Speaking",
-  "/projects": "Projects",
-  "/contact": "Contact",
-};
+const titles = { "/": "About", "/work": "Work", "/speaking": "Speaking", "/projects": "Projects", "/contact": "Contact" };
 
 export default function Layout() {
+  const [open, setOpen] = useState(false);
   const { pathname } = useLocation();
 
   useEffect(() => {
+    setOpen(false);
     window.scrollTo(0, 0);
     const page = titles[pathname];
-    document.title = page ? `${page} — ${site.name}` : `${site.name} — ${site.tagline}`;
+    document.title = page ? `${page} — ${site.name}` : site.name;
   }, [pathname]);
 
   return (
-    <>
-      <header className="site-header">
-        <Link to="/" className="site-header__brand">
-          <b>{site.name}</b> · {site.tagline}{site.location ? ` · ${site.location}` : ""}
-        </Link>
-        <nav className="site-nav" aria-label="Main">
+    <div className="shell">
+      <aside className="sidebar">
+        <div className="sidebar__head">
+          <Link to="/" className="brand">
+            <h1 className="brand__name">{site.name}</h1>
+            <p className="brand__tagline">{site.tagline}</p>
+          </Link>
+          <button className="menu-toggle" aria-expanded={open} aria-controls="site-nav" onClick={() => setOpen((o) => !o)}>
+            {open ? "Close" : "Menu"}
+          </button>
+        </div>
+        <nav id="site-nav" className={`nav${open ? " open" : ""}`} aria-label="Main">
           {nav.map((n) => (
-            <NavLink key={n.to} to={n.to} end={n.to === "/"}>
-              {n.label}
-            </NavLink>
+            <NavLink key={n.to} to={n.to} end={n.to === "/"}>{n.label}</NavLink>
           ))}
         </nav>
-      </header>
-      <main>
-        <Outlet />
+        <div className="sidebar__foot">© {new Date().getFullYear()} {site.name}</div>
+      </aside>
+      <main className="main">
+        <div className="page">
+          <Outlet />
+        </div>
       </main>
-      <footer className="site-footer">
-        <span className="label">© {new Date().getFullYear()} {site.name}</span>
-        <span className="label">
-          <a className="ul" href={site.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
-          {"   ·   "}
-          <a className="ul" href={site.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </span>
-      </footer>
-    </>
+    </div>
   );
 }

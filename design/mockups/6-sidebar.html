@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Direction 6 — Sidebar</title>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#fff;color:#000;font-family:Karla,"Helvetica Neue",Arial,sans-serif;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{display:grid;grid-template-columns:300px 1fr;min-height:100vh}
+aside{padding:64px 0 0 80px;position:sticky;top:0;height:100vh}
+aside h1{margin:0 0 26px;font-size:22px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+aside nav{display:flex;flex-direction:column;gap:9px;font-size:17px}
+aside nav a::before{content:"→";display:inline-block;width:26px;color:#999}
+aside nav a.on{font-weight:700}
+aside nav a.on::before{color:#000}
+aside nav a:hover{text-decoration:underline;text-underline-offset:3px}
+aside .soc{margin-top:36px;display:flex;flex-direction:column;gap:4px;font-size:13px;color:#555}
+main{padding:64px 80px 100px 40px;max-width:1000px}
+.kicker{font-size:14px;color:#555;margin:0 0 44px}
+.home img{width:100%;max-width:560px;aspect-ratio:4/5;object-fit:cover;object-position:60% 30%;filter:grayscale(1);display:block}
+.home .cap{font-size:12px;color:#888;margin-top:8px}
+.home p{max-width:560px;font-size:17px;margin:34px 0 0}
+.home p a{text-decoration:underline;text-underline-offset:3px}
+.list{max-width:620px}
+.list .it{margin:0 0 22px}
+.list .it a{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.list .it a:hover{color:#777}
+.list .it i{color:#333}
+.list .it p{margin:2px 0 0;color:#222}
+.list h2{font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin:40px 0 16px}
+.list h2:first-child{margin-top:0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px;max-width:1000px}
+.badge{position:fixed;bottom:14px;right:14px;background:#000;color:#fff;font:12px system-ui;padding:6px 10px;letter-spacing:.08em}
+@media(max-width:860px){.wrap{grid-template-columns:1fr}aside{position:static;height:auto;padding:28px 20px 0}aside nav{flex-direction:row;flex-wrap:wrap;gap:6px 18px}aside nav a::before{display:none}aside .soc{flex-direction:row;gap:14px;margin-top:18px}main{padding:28px 20px 60px}.two{grid-template-columns:1fr;gap:0}}
+</style></head><body>
+<div class="wrap">
+<aside>
+  <h1>Sangeeta Singh-Kurtz</h1>
+  <nav><a class="on">Home</a><a>About</a><a>Work</a><a>Speaking</a><a>Projects</a><a>Contact</a></nav>
+  <div class="soc"><a>ig</a><a>lnkdn</a><a>email</a></div>
+</aside>
+<main>
+  <div class="two">
+    <div class="home">
+      <img src="/images/about.webp" alt="">
+      <div class="cap">Photograph by Nicholas Takahashi</div>
+      <p>Sangeeta Singh-Kurtz is a freelance journalist who investigates intriguing people. She was a staff writer at <a>New York Magazine</a> for five years. She lives in Tokyo, where she recently completed her debut novel.</p>
+    </div>
+    <div class="list">
+      <h2>Selected features</h2>
+      <div class="it"><a>At Thailand’s Real White Lotus Hotel, Where the Ultrarich Get Coddled</a> <i>(Vulture)</i><p>“Sometimes they’ll ask us to bring the sun.”</p></div>
+      <div class="it"><a>The Chaos Inside Diddy’s Harlem Charter School</a> <i>(The Cut)</i><p>Parents were drawn in by celebrity connections. Instead, their children faced violence and dysfunction.</p></div>
+      <div class="it"><a>The Man of Your Dreams</a> <i>(The Cut)</i><p>For $300, Replika sells an AI companion who will never die, argue, or cheat — until his algorithm is updated.</p></div>
+      <div class="it"><a>The Big Dissolve</a> <i>(The Cut)</i><p>They blew out their faces. Now they’re melting them down.</p></div>
+      <div class="it"><a>City of Fakes</a> <i>(The Cut)</i><p>Among a certain set of rich New Yorkers, counterfeit luxury bags may be more popular than the real thing.</p></div>
+      <h2>Profiles</h2>
+      <div class="it"><a>Into the Dollhouse</a> <i>(The Cut)</i><p>America Ferrera taught a generation of women to reject traditional beauty standards. So what’s she doing in the Barbie movie?</p></div>
+      <div class="it"><a>The Couple Behind the Skims-Industrial Complex</a> <i>(The Cut)</i><p>A big chunk of the Kardashian family business rides on Emma and Jens Grede.</p></div>
+      <div class="it"><a>Sam Jay Is Still Figuring It Out</a> <i>(The Cut)</i><p>Profile of the controversial <em>SNL</em> comedian.</p></div>
+    </div>
+  </div>
+</main>
+</div>
+<div class="badge">6 · SIDEBAR</div>
+</body></html>

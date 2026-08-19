@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { site, contact } from "../content.js";
-import Masthead from "../components/Masthead.jsx";
+import { site } from "../content.js";
 
 export default function Contact() {
   const [status, setStatus] = useState({ state: "idle", msg: "" });
@@ -36,51 +35,37 @@ export default function Contact() {
   }
 
   return (
-    <>
-      <Masthead page title="Contact" left={contact.mastheadLeft} right={contact.mastheadRight} />
-      <section className="contact">
-        <div className="contact__aside">
-          <p>{contact.intro}</p>
-          <span className="label">
-            Elsewhere ·{" "}
-            <a href={site.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>{" "}
-            ·{" "}
-            <a href={site.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          </span>
+    <form className="form" onSubmit={onSubmit}>
+      <div className="form__row">
+        <div className="field">
+          <label htmlFor="firstName">First Name <span className="req">(required)</span></label>
+          <input id="firstName" name="firstName" autoComplete="given-name" required />
         </div>
-        <form className="form" onSubmit={onSubmit}>
-          <div className="form__row">
-            <div className="field">
-              <label htmlFor="firstName">First Name</label>
-              <input id="firstName" name="firstName" autoComplete="given-name" required />
-            </div>
-            <div className="field">
-              <label htmlFor="lastName">Last Name</label>
-              <input id="lastName" name="lastName" autoComplete="family-name" required />
-            </div>
-          </div>
-          <div className="field">
-            <label htmlFor="email">Email</label>
-            <input id="email" name="email" type="email" autoComplete="email" required />
-          </div>
-          <div className="field">
-            <label htmlFor="subject">Subject</label>
-            <input id="subject" name="subject" required />
-          </div>
-          <div className="field">
-            <label htmlFor="message">Message</label>
-            <textarea id="message" name="message" required />
-          </div>
-          <button className="btn" type="submit" disabled={status.state === "sending"}>
-            {status.state === "sending" ? "Sending…" : "Send message"}
-          </button>
-          {status.msg && (
-            <p className={`form__status${status.state === "error" ? " error" : ""}`} role="status">
-              {status.msg}
-            </p>
-          )}
-        </form>
-      </section>
-    </>
+        <div className="field">
+          <label htmlFor="lastName">Last Name <span className="req">(required)</span></label>
+          <input id="lastName" name="lastName" autoComplete="family-name" required />
+        </div>
+      </div>
+      <div className="field">
+        <label htmlFor="email">Email <span className="req">(required)</span></label>
+        <input id="email" name="email" type="email" autoComplete="email" required />
+      </div>
+      <div className="field">
+        <label htmlFor="subject">Subject <span className="req">(required)</span></label>
+        <input id="subject" name="subject" required />
+      </div>
+      <div className="field">
+        <label htmlFor="message">Message <span className="req">(required)</span></label>
+        <textarea id="message" name="message" required />
+      </div>
+      <button className="btn" type="submit" disabled={status.state === "sending"}>
+        {status.state === "sending" ? "Sending…" : "Submit"}
+      </button>
+      {status.msg && (
+        <p className={`form__status${status.state === "error" ? " error" : ""}`} role="status">
+          {status.msg}
+        </p>
+      )}
+    </form>
   );
 }
