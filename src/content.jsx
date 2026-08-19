@@ -115,27 +115,27 @@ export const speaking = {
   items: [
     {
       title: "Do Dating Apps Really Want You to Find Love?",
-      blurb: "Offline with Jon Favreau",
+      pub: "Offline with Jon Favreau",
       url: "https://www.youtube.com/watch?v=pgmvPxWDhSA",
     },
     {
       title: "Tinder is reportedly testing a $500 per month subscription plan. Is it worth it?",
-      blurb: "CNN",
+      pub: "CNN",
       url: "https://www.cnn.com/videos/business/2023/01/19/nightcap-tinder-500-dollar-subscription-clip-orig-nb.cnn",
     },
     {
       title: "How dating apps are more and more “gamified”",
-      blurb: "Marketplace",
+      pub: "Marketplace",
       url: "https://www.marketplace.org/shows/marketplace-tech/how-dating-apps-are-more-and-more-gamified/",
     },
     {
       title: "Sex and dating in the pandemic",
-      blurb: "NPR",
+      pub: "NPR",
       url: "https://www.mprnews.org/episode/2020/10/01/davis-how-do-you-date-during-a-pandemic",
     },
     {
       title: "Mysteries at the Museum",
-      blurb: "The Travel Channel",
+      pub: "The Travel Channel",
       url: "https://www.travelchannel.com/shows/mysteries-at-the-museum/episodes/lord-lucan-worlds-greatest-drag-racer-and-missing-caravaggio",
     },
   ],
@@ -146,18 +146,21 @@ export const projects = {
   photo: "/images/projects.webp",
   items: [
     {
-      title: "Land of the Giants, Vox and The Verge",
+      title: "Land of the Giants",
+      pub: "Vox and The Verge",
       blurb:
         "Host of the award-winning narrative podcast series about influential tech companies. The six-episode season focused on the billion-dollar dating app industry. The season won an Adweek Audio Award for best new technology podcast.",
       url: "https://podcasts.apple.com/us/podcast/land-of-the-giants/id1465767420",
     },
     {
-      title: "En Plein Air, Substack",
+      title: "En Plein Air",
+      pub: "Substack",
       blurb: "A one year newsletter pop-up, intimate narrative travelogues.",
       url: "https://pleinair.substack.com/",
     },
     {
-      title: "The Big Business of Immortality, Quartz",
+      title: "The Big Business of Immortality",
+      pub: "Quartz",
       blurb: "Once upon a time I spoke to 100 people who think humans can live forever.",
       url: "https://qz.com/1578796/why-silicon-valley-titans-are-obsessed-with-immortality",
     },

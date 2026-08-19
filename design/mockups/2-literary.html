@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Direction 2 — Literary</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#f8f4ec;--ink:#1c1a17;--mute:#7a736a;--rule:#e4ddd0;--sage:#5f6b5a;}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:"EB Garamond",Garamond,Georgia,serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.sc{font-variant:small-caps;letter-spacing:.12em;font-size:15px}
+header{text-align:center;padding:40px 24px 0}
+header .name{font-family:"Cormorant Garamond",serif;font-weight:300;font-size:22px;letter-spacing:.34em;text-transform:uppercase;margin:0}
+nav{margin-top:22px;display:flex;justify-content:center;gap:36px}
+nav a{font-variant:small-caps;letter-spacing:.16em;font-size:16px;color:var(--mute)}
+nav a.on{color:var(--ink);border-bottom:1px solid var(--ink)}
+.orn{text-align:center;color:var(--mute);margin:30px 0 0;font-size:18px;letter-spacing:.5em}
+.hero{max-width:1040px;margin:44px auto 0;padding:0 24px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.hero figure{margin:0}
+.hero img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;filter:sepia(.18) contrast(.98)}
+.hero figcaption{margin-top:10px;font-size:13px;color:var(--mute);font-style:italic;text-align:center}
+.hero h1{font-family:"Cormorant Garamond",serif;font-weight:300;font-size:72px;line-height:1;margin:0 0 24px;letter-spacing:-.01em}
+.hero h1 i{font-style:italic;font-weight:300}
+.hero p{font-size:21px;line-height:1.65;margin:0 0 18px;max-width:42ch}
+.hero p a{border-bottom:1px solid var(--rule);font-style:italic}
+.hero .links{margin-top:26px;display:flex;gap:24px}
+.hero .links a{font-variant:small-caps;letter-spacing:.16em;font-size:15px;border-bottom:1px solid var(--ink)}
+.quote{max-width:680px;margin:96px auto 0;text-align:center;padding:0 24px}
+.quote p{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:300;font-size:34px;line-height:1.35;margin:0}
+.quote small{display:block;margin-top:18px;font-variant:small-caps;letter-spacing:.18em;color:var(--mute);font-size:14px}
+.sel{max-width:720px;margin:96px auto 80px;padding:0 24px}
+.sel h2{font-family:"Cormorant Garamond",serif;font-weight:300;font-size:30px;text-align:center;margin:0 0 8px}
+.sel .sub{text-align:center;font-variant:small-caps;letter-spacing:.18em;color:var(--mute);font-size:14px;margin:0 0 40px}
+.it{padding:22px 0;border-top:1px solid var(--rule);display:flex;justify-content:space-between;gap:24px;align-items:baseline}
+.it:last-child{border-bottom:1px solid var(--rule)}
+.it h3{margin:0 0 4px;font-family:"Cormorant Garamond",serif;font-weight:400;font-size:26px;line-height:1.2}
+.it h3:hover{color:var(--sage);font-style:italic}
+.it p{margin:0;color:var(--mute);font-size:16px;line-height:1.5}
+.it .pub{white-space:nowrap;font-variant:small-caps;letter-spacing:.14em;color:var(--mute);font-size:14px}
+footer{text-align:center;padding:40px 24px 60px;color:var(--mute);font-size:14px;font-style:italic}
+.badge{position:fixed;bottom:14px;right:14px;background:#111;color:#fff;font:12px system-ui;padding:6px 10px;border-radius:4px;letter-spacing:.08em}
+@media(max-width:800px){.hero{grid-template-columns:1fr;gap:32px}.hero h1{font-size:52px}nav{gap:18px;flex-wrap:wrap}.quote p{font-size:26px}.it{flex-direction:column;gap:6px}}
+</style></head><body>
+<header><p class="name">Sangeeta Singh-Kurtz</p>
+<nav><a class="on">About</a><a>Work</a><a>Speaking</a><a>Projects</a><a>Contact</a></nav></header>
+<p class="orn">·  ❦  ·</p>
+<section class="hero">
+  <figure><img src="/images/about.webp" alt=""><figcaption>Photograph by Nicholas Takahashi</figcaption></figure>
+  <div>
+    <h1>Writer<br><i>& journalist</i></h1>
+    <p>Sangeeta Singh-Kurtz is a freelance journalist who investigates intriguing people. She was a staff writer at <a>New York Magazine</a> for five years.</p>
+    <p>She lives in Tokyo, where she recently completed her debut novel.</p>
+    <div class="links"><a>Instagram</a><a>LinkedIn</a><a>Contact</a></div>
+  </div>
+</section>
+<section class="quote"><p>“Sometimes they’ll ask us to bring the sun.”</p><small>from At Thailand’s Real White Lotus Hotel — Vulture</small></section>
+<section class="sel">
+  <h2>Selected Writing</h2><p class="sub">Features · Profiles · Investigations</p>
+  <a class="it"><div><h3>The Man of Your Dreams</h3><p>For $300, Replika sells an AI companion who will never die, argue, or cheat — until his algorithm is updated.</p></div><span class="pub">The Cut</span></a>
+  <a class="it"><div><h3>The Big Dissolve</h3><p>They blew out their faces. Now they’re melting them down.</p></div><span class="pub">The Cut</span></a>
+  <a class="it"><div><h3>Into the Dollhouse</h3><p>America Ferrera taught a generation of women to reject traditional beauty standards. So what’s she doing in the Barbie movie?</p></div><span class="pub">The Cut · Cover</span></a>
+  <a class="it"><div><h3>City of Fakes</h3><p>Among a certain set of rich New Yorkers, counterfeit luxury bags may be more popular than the real thing.</p></div><span class="pub">The Cut</span></a>
+</section>
+<footer>Sangeeta Singh-Kurtz — Tokyo</footer>
+<div class="badge">2 · LITERARY</div>
+</body></html>

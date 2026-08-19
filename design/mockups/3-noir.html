@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Direction 3 — Noir</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#121110;--bg2:#1b1917;--fg:#efe9df;--mute:#9b948a;--line:#2c2926;--gold:#c9a86a;}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font-family:Fraunces,Georgia,serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.sans{font-family:"DM Sans",system-ui,sans-serif;font-size:12px;letter-spacing:.2em;text-transform:uppercase}
+header{position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:26px 44px;z-index:2}
+header .logo{font-style:italic;font-weight:300;font-size:22px}
+nav a{margin-left:30px;font-family:"DM Sans",sans-serif;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+nav a.on{color:var(--fg)}
+.hero{position:relative;min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
+.hero .img{position:relative;overflow:hidden}
+.hero img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.1) brightness(.85);display:block}
+.hero .img::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 60%,var(--bg) 100%),linear-gradient(0deg,var(--bg) 0%,transparent 30%)}
+.hero .txt{padding:140px 64px 64px 48px;display:flex;flex-direction:column;justify-content:center}
+.hero .kicker{color:var(--gold);margin-bottom:26px}
+.hero h1{font-weight:300;font-size:clamp(56px,7vw,104px);line-height:.95;margin:0 0 30px;letter-spacing:-.02em}
+.hero h1 i{font-style:italic;color:var(--gold)}
+.hero p{font-size:20px;line-height:1.6;color:var(--mute);max-width:44ch;margin:0 0 14px;font-weight:300}
+.hero p a{color:var(--fg);border-bottom:1px solid var(--gold)}
+.cta{margin-top:34px;display:flex;gap:16px;align-items:center}
+.cta .btn{font-family:"DM Sans",sans-serif;font-size:12px;letter-spacing:.2em;text-transform:uppercase;border:1px solid var(--gold);color:var(--gold);padding:13px 24px}
+.cta .btn:hover{background:var(--gold);color:var(--bg)}
+.cta .ghost{font-family:"DM Sans",sans-serif;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);padding:13px 10px}
+.strip{display:flex;gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.strip div{flex:1;padding:22px 44px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:4px}
+.strip div:last-child{border-right:0}
+.strip b{font-weight:400;font-size:22px;font-style:italic}
+.strip span{color:var(--mute)}
+.sel{padding:80px 44px}
+.sel .hd{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:36px}
+.sel h2{margin:0;font-weight:300;font-size:40px;font-style:italic}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.card{background:var(--bg);padding:32px 28px;min-height:280px;display:flex;flex-direction:column;justify-content:space-between;transition:background .2s}
+.card:hover{background:var(--bg2)}
+.card h3{margin:0;font-weight:300;font-size:28px;line-height:1.15}
+.card p{margin:14px 0 0;color:var(--mute);font-size:15px;line-height:1.5;font-weight:300}
+.card .m{display:flex;justify-content:space-between;color:var(--mute);margin-top:28px}
+.card .m .y{color:var(--gold)}
+footer{padding:30px 44px;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--mute)}
+.badge{position:fixed;bottom:14px;right:14px;background:#fff;color:#111;font:12px system-ui;padding:6px 10px;border-radius:4px;letter-spacing:.08em;z-index:5}
+@media(max-width:860px){.hero{grid-template-columns:1fr;min-height:0}.hero .img{height:60vh}.hero .img::after{background:linear-gradient(0deg,var(--bg) 0%,transparent 40%)}.hero .txt{padding:24px 22px 40px}.hero h1{font-size:52px}header{padding:20px 22px}nav a{margin-left:14px}.strip{flex-direction:column}.strip div{border-right:0;border-bottom:1px solid var(--line);padding:16px 22px}.grid{grid-template-columns:1fr}.sel,footer{padding-left:22px;padding-right:22px}}
+</style></head><body>
+<header><span class="logo">S. Singh-Kurtz</span><nav><a class="on">About</a><a>Work</a><a>Speaking</a><a>Projects</a><a>Contact</a></nav></header>
+<section class="hero">
+  <div class="img"><img src="/images/about.webp" alt=""></div>
+  <div class="txt">
+    <span class="sans kicker">Journalist · Novelist · Tokyo</span>
+    <h1>Stories about<br><i>intriguing</i> people.</h1>
+    <p>Sangeeta Singh-Kurtz is a freelance journalist. She was a staff writer at <a>New York Magazine</a> for five years and lives in Tokyo, where she recently completed her debut novel.</p>
+    <div class="cta"><a class="btn">Read the work</a><a class="ghost">Instagram</a><a class="ghost">LinkedIn</a></div>
+  </div>
+</section>
+<section class="strip">
+  <div><b>New York Magazine</b><span class="sans">Staff writer, five years</span></div>
+  <div><b>Land of the Giants</b><span class="sans">Host · Adweek Audio Award</span></div>
+  <div><b>The Cut · Vulture · Quartz</b><span class="sans">Features &amp; profiles</span></div>
+</section>
+<section class="sel">
+  <div class="hd"><h2>Selected work</h2><span class="sans" style="color:var(--mute)">All work →</span></div>
+  <div class="grid">
+    <a class="card"><div><h3>At Thailand’s Real White Lotus Hotel, Where the Ultrarich Get Coddled</h3><p>“Sometimes they’ll ask us to bring the sun.”</p></div><div class="m sans"><span>Vulture</span><span class="y">Feature</span></div></a>
+    <a class="card"><div><h3>The Man of Your Dreams</h3><p>For $300, Replika sells an AI companion who will never die, argue, or cheat — until his algorithm is updated.</p></div><div class="m sans"><span>The Cut</span><span class="y">Feature</span></div></a>
+    <a class="card"><div><h3>The Couple Behind the Skims-Industrial Complex</h3><p>A big chunk of the Kardashian family business rides on Emma and Jens Grede.</p></div><div class="m sans"><span>The Cut</span><span class="y">Profile</span></div></a>
+  </div>
+</section>
+<footer><span class="sans">© Sangeeta Singh-Kurtz</span><span class="sans">Photograph · Nicholas Takahashi</span></footer>
+<div class="badge">3 · NOIR</div>
+</body></html>

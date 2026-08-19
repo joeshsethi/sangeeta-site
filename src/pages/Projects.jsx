@@ -1,14 +1,20 @@
 import { projects } from "../content.jsx";
-import LinkList from "../components/LinkList.jsx";
+import Masthead from "../components/Masthead.jsx";
+import IndexList from "../components/IndexList.jsx";
 
 export default function Projects() {
   return (
     <>
-      <h2 className="section-heading">{projects.heading}</h2>
-      <div className="hero-photo">
+      <Masthead page title="Projects" left={projects.heading} right="Audio · Newsletters · Features" />
+      <figure className="page-figure">
         <img src={projects.photo} alt="Land of the Giants: Dating Games, podcast artwork" width="1500" height="1000" />
-      </div>
-      <LinkList items={projects.items} />
+      </figure>
+      <section className="section">
+        <div className="section__hd">
+          <h2>Selected Projects</h2>
+        </div>
+        <IndexList items={projects.items} />
+      </section>
     </>
   );
 }

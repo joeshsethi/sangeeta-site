@@ -1,20 +1,35 @@
 import { work } from "../content.jsx";
-import LinkList from "../components/LinkList.jsx";
+import Masthead from "../components/Masthead.jsx";
+import IndexList from "../components/IndexList.jsx";
 
 export default function Work() {
+  let n = 1;
   return (
     <>
-      {work.sections.map((s) => (
-        <section key={s.heading}>
-          <h2 className="section-heading">{s.heading}</h2>
-          <LinkList items={s.items} />
-        </section>
-      ))}
-      <div className="gallery" aria-label="Selected clips">
-        {work.gallery.map((src, i) => (
-          <img key={src} src={src} alt={`Published work ${i + 1}`} loading="lazy" />
-        ))}
-      </div>
+      <Masthead page title="Work" left="Features · Profiles · Investigations" right="The Cut · Vulture · New York" />
+      {work.sections.map((s) => {
+        const start = n;
+        n += s.items.length;
+        return (
+          <section className="section" key={s.heading}>
+            <div className="section__hd">
+              <h2>{s.heading}</h2>
+              <span className="label">{String(s.items.length).padStart(2, "0")} pieces</span>
+            </div>
+            <IndexList items={s.items} start={start} />
+          </section>
+        );
+      })}
+      <section className="section">
+        <div className="section__hd">
+          <h2>In Print</h2>
+        </div>
+        <div className="clips">
+          {work.gallery.map((src, i) => (
+            <img key={src} src={src} alt={`Published work, clipping ${i + 1}`} loading="lazy" />
+          ))}
+        </div>
+      </section>
     </>
   );
 }
