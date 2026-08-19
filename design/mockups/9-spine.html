@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Direction 9 — Spine</title>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#fff;color:#000;font-family:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif;font-size:16px;line-height:1.45;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+/* the spine: sticky, full-height photo strip with the name running up it */
+.spine{position:sticky;top:0;height:100vh;overflow:hidden;background:#000}
+.spine img{width:100%;height:100%;object-fit:cover;object-position:58% 30%;filter:grayscale(1) contrast(1.05);display:block;opacity:.92}
+.spine h1{position:absolute;left:calc(50% - 17px);bottom:26px;margin:0;transform-origin:left bottom;transform:rotate(-90deg);white-space:nowrap;color:#fff;font-weight:500;font-size:34px;letter-spacing:.03em;line-height:1}
+.spine .cap{position:absolute;right:12px;top:18px;color:#fff;font-size:11px;opacity:.7;writing-mode:vertical-rl;transform:rotate(180deg);letter-spacing:.06em}
+/* right column */
+main{padding:0 56px 80px 56px;max-width:980px}
+.top{position:sticky;top:0;background:#fff;display:flex;justify-content:space-between;align-items:center;padding:22px 0 14px;border-bottom:1px solid #000;z-index:2}
+.top .role{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#555}
+.top nav a{margin-left:4px;padding:5px 9px;font-size:14px;letter-spacing:.02em}
+.top nav a.on,.top nav a:hover{background:#000;color:#fff}
+.intro{padding:72px 0 56px;max-width:640px}
+.intro h2{font-weight:500;font-size:clamp(30px,3.6vw,46px);line-height:1.08;letter-spacing:-.02em;margin:0 0 28px}
+.intro p{font-size:19px;margin:0 0 14px;color:#111}
+.intro p a{border-bottom:1px solid #000}
+.intro .links{margin-top:24px;display:flex;gap:6px}
+.intro .links a{border:1px solid #000;padding:6px 12px;font-size:13px;letter-spacing:.04em}
+.intro .links a:hover{background:#000;color:#fff}
+/* ledger */
+.ledger{margin-top:24px}
+.ledger h3{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#555;font-weight:500;margin:44px 0 0;padding-bottom:8px;border-bottom:1px solid #000;display:flex;justify-content:space-between}
+.ledger h3 span{color:#999}
+.row{display:grid;grid-template-columns:36px 1fr 150px 48px;gap:18px;align-items:baseline;padding:13px 6px;margin:0 -6px;border-bottom:1px solid #e5e5e5;transition:background .08s}
+.row:hover{background:#000;color:#fff}
+.row .n{font-size:12px;color:#999;font-variant-numeric:tabular-nums}
+.row:hover .n,.row:hover .pub,.row:hover .yr,.row:hover .dek{color:#fff}
+.row .t{font-size:19px;font-weight:500;letter-spacing:-.01em;line-height:1.25}
+.row .dek{display:block;font-size:14px;color:#555;margin-top:3px;font-weight:400;line-height:1.4}
+.row .pub{font-size:13px;color:#555;text-align:right}
+.row .yr{font-size:13px;color:#999;text-align:right;font-variant-numeric:tabular-nums}
+.badge{position:fixed;bottom:14px;right:14px;background:#000;color:#fff;font:12px system-ui;padding:6px 10px;letter-spacing:.08em;z-index:5}
+@media(max-width:860px){.wrap{grid-template-columns:1fr}.spine{position:relative;height:58vh}.spine h1{transform:none;left:18px;bottom:18px;font-size:28px}.spine .cap{writing-mode:horizontal-tb;transform:none;right:auto;left:18px;bottom:54px}main{padding:0 20px 60px}.top{padding:14px 0 10px;flex-wrap:wrap;gap:8px}.top nav a{margin-left:0;margin-right:2px;padding:5px 8px}.intro{padding:40px 0 30px}.row{grid-template-columns:28px 1fr;gap:4px 12px}.row .pub,.row .yr{grid-column:2;text-align:left}.row .yr{display:none}}
+</style></head><body>
+<div class="wrap">
+  <aside class="spine">
+    <img src="/images/about.webp" alt="">
+    <h1>Sangeeta Singh-Kurtz</h1>
+    <span class="cap">Photograph · Nicholas Takahashi</span>
+  </aside>
+  <main>
+    <div class="top"><span class="role">Writer · Tokyo</span><nav><a class="on">About</a><a>Work</a><a>Speaking</a><a>Projects</a><a>Contact</a></nav></div>
+    <section class="intro">
+      <h2>A freelance journalist who investigates intriguing people.</h2>
+      <p>Sangeeta Singh-Kurtz was a staff writer at <a>New York Magazine</a> for five years. She lives in Tokyo, where she recently completed her debut novel.</p>
+      <div class="links"><a>Instagram</a><a>LinkedIn</a><a>Email</a></div>
+    </section>
+    <section class="ledger">
+      <h3>Features &amp; Investigations <span>06</span></h3>
+      <a class="row"><span class="n">01</span><span class="t">At Thailand’s Real White Lotus Hotel, Where the Ultrarich Get Coddled<span class="dek">“Sometimes they’ll ask us to bring the sun.”</span></span><span class="pub">Vulture</span><span class="yr">2025</span></a>
+      <a class="row"><span class="n">02</span><span class="t">The Chaos Inside Diddy’s Harlem Charter School<span class="dek">Parents were drawn in by celebrity connections. Instead, their children faced violence and dysfunction.</span></span><span class="pub">The Cut</span><span class="yr">2024</span></a>
+      <a class="row"><span class="n">03</span><span class="t">The Man of Your Dreams<span class="dek">For $300, Replika sells an AI companion who will never die, argue, or cheat — until his algorithm is updated.</span></span><span class="pub">The Cut</span><span class="yr">2023</span></a>
+      <a class="row"><span class="n">04</span><span class="t">The Big Dissolve<span class="dek">They blew out their faces. Now they’re melting them down.</span></span><span class="pub">The Cut</span><span class="yr">2023</span></a>
+      <a class="row"><span class="n">05</span><span class="t">City of Fakes<span class="dek">Among a certain set of rich New Yorkers, counterfeit luxury bags may be more popular than the real thing.</span></span><span class="pub">The Cut</span><span class="yr">2022</span></a>
+      <h3>Profiles <span>07</span></h3>
+      <a class="row"><span class="n">06</span><span class="t">The Meltdown at Miss Universe<span class="dek">Nadeen Ayoub represented Palestine at the world’s biggest and messiest beauty pageant.</span></span><span class="pub">The Cut</span><span class="yr">2025</span></a>
+      <a class="row"><span class="n">07</span><span class="t">Into the Dollhouse<span class="dek">America Ferrera taught a generation of women to reject traditional beauty standards. So what’s she doing in the Barbie movie?</span></span><span class="pub">The Cut · Cover</span><span class="yr">2023</span></a>
+      <a class="row"><span class="n">08</span><span class="t">The Couple Behind the Skims-Industrial Complex<span class="dek">A big chunk of the Kardashian family business rides on Emma and Jens Grede.</span></span><span class="pub">The Cut</span><span class="yr">2024</span></a>
+      <a class="row"><span class="n">09</span><span class="t">Sam Jay Is Still Figuring It Out<span class="dek">Profile of the controversial <em>SNL</em> comedian.</span></span><span class="pub">The Cut</span><span class="yr">2021</span></a>
+      <h3>Speaking <span>05</span></h3>
+      <a class="row"><span class="n">10</span><span class="t">Do Dating Apps Really Want You to Find Love?</span><span class="pub">Offline with Jon Favreau</span><span class="yr">2023</span></a>
+      <a class="row"><span class="n">11</span><span class="t">How dating apps are more and more “gamified”</span><span class="pub">Marketplace</span><span class="yr">2023</span></a>
+      <a class="row"><span class="n">12</span><span class="t">Sex and dating in the pandemic</span><span class="pub">NPR</span><span class="yr">2020</span></a>
+    </section>
+  </main>
+</div>
+<div class="badge">9 · SPINE</div>
+</body></html>

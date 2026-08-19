@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Direction 8 — Contents</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#fff;color:#000;font-family:Newsreader,Georgia,serif;font-size:19px;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.page{max-width:880px;margin:0 auto;padding:0 28px}
+/* folio */
+.folio{display:flex;justify-content:space-between;align-items:baseline;padding:26px 0 0;font-size:15px;color:#555;font-variant:small-caps;letter-spacing:.08em}
+.folio nav a{margin-left:22px}
+.folio nav a:hover,.folio nav a.on{color:#000;border-bottom:1px solid #000}
+/* title page */
+.title{display:grid;grid-template-columns:1fr 220px;gap:48px;align-items:end;padding:96px 0 56px;border-bottom:1px solid #000}
+.title h1{margin:0;font-weight:300;font-size:clamp(48px,7.5vw,92px);line-height:.98;letter-spacing:-.02em}
+.title h1 em{font-style:italic;font-weight:300}
+.title .sub{margin:22px 0 0;font-size:17px;color:#555;font-variant:small-caps;letter-spacing:.1em}
+.jacket img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:62% 30%;filter:grayscale(1);display:block}
+.jacket figcaption{font-size:13px;color:#777;margin-top:8px;font-style:italic}
+/* bio with drop cap */
+.bio{padding:56px 0 8px;max-width:640px}
+.bio p{margin:0 0 18px;font-size:21px;line-height:1.55}
+.bio p:first-child::first-letter{float:left;font-size:74px;line-height:.78;padding:8px 10px 0 0;font-weight:300}
+.bio p a{border-bottom:1px solid #000}
+.bio .links{font-size:16px;font-variant:small-caps;letter-spacing:.1em;margin-top:8px}
+.bio .links a{margin-right:18px;border-bottom:1px solid #bbb}
+/* contents with dot leaders */
+.toc{padding:72px 0 96px}
+.toc h2{font-weight:400;font-size:17px;font-variant:small-caps;letter-spacing:.14em;margin:44px 0 14px;color:#000}
+.toc h2:first-child{margin-top:0}
+.toc ol{list-style:none;margin:0;padding:0;counter-reset:c}
+.toc li{counter-increment:c;display:flex;align-items:baseline;gap:12px;padding:7px 0;font-size:20px}
+.toc li::before{content:counter(c,decimal-leading-zero);font-size:13px;color:#999;min-width:26px;font-variant-numeric:tabular-nums}
+.toc li a{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.toc li a:hover{font-style:italic}
+.toc li .dots{flex:1;border-bottom:1px dotted #000;transform:translateY(-6px);min-width:24px;opacity:.55}
+.toc li .pub{white-space:nowrap;font-size:15px;color:#555;font-variant:small-caps;letter-spacing:.08em}
+.toc li .dek{display:none}
+.toc li:hover .dek{display:block}
+.toc .note{margin:14px 0 0 38px;font-size:16px;color:#666;font-style:italic;max-width:60ch}
+/* end */
+footer{border-top:1px solid #000;padding:22px 0 60px;display:flex;justify-content:space-between;font-size:14px;color:#777;font-variant:small-caps;letter-spacing:.08em}
+.badge{position:fixed;bottom:14px;right:14px;background:#000;color:#fff;font:12px system-ui;padding:6px 10px;letter-spacing:.08em}
+@media(max-width:720px){.title{grid-template-columns:1fr;gap:28px;padding:56px 0 36px}.jacket{max-width:220px}.toc li{flex-wrap:wrap;gap:4px 10px}.toc li .dots{display:none}.toc li a{white-space:normal}.toc li .pub{width:100%;padding-left:36px}.folio nav a{margin-left:12px}}
+</style></head><body>
+<div class="page">
+  <header class="folio"><span>Sangeeta Singh-Kurtz</span><nav><a class="on">About</a><a>Work</a><a>Speaking</a><a>Projects</a><a>Contact</a></nav></header>
+
+  <section class="title">
+    <div>
+      <h1>Sangeeta<br><em>Singh-Kurtz</em></h1>
+      <p class="sub">Journalist · Novelist · Tokyo</p>
+    </div>
+    <figure class="jacket" style="margin:0"><img src="/images/about.webp" alt=""><figcaption>Photograph by Nicholas Takahashi</figcaption></figure>
+  </section>
+
+  <section class="bio">
+    <p>Sangeeta Singh-Kurtz is a freelance journalist who investigates intriguing people. She was a staff writer at <a>New York Magazine</a> for five years. She lives in Tokyo, where she recently completed her debut novel.</p>
+    <p class="links"><a>Instagram</a><a>LinkedIn</a><a>Email</a></p>
+  </section>
+
+  <section class="toc">
+    <h2>Features &amp; Investigations</h2>
+    <ol>
+      <li><a>At Thailand’s Real White Lotus Hotel, Where the Ultrarich Get Coddled</a><span class="dots"></span><span class="pub">Vulture</span></li>
+      <li><a>The Chaos Inside Diddy’s Harlem Charter School</a><span class="dots"></span><span class="pub">The Cut</span></li>
+      <li><a>The Man of Your Dreams</a><span class="dots"></span><span class="pub">The Cut</span></li>
+      <li><a>The Big Dissolve</a><span class="dots"></span><span class="pub">The Cut</span></li>
+      <li><a>City of Fakes</a><span class="dots"></span><span class="pub">The Cut</span></li>
+      <li><a>How Much Would You Pay for Peace of Mind?</a><span class="dots"></span><span class="pub">The Cut</span></li>
+    </ol>
+    <h2>Profiles</h2>
+    <ol>
+      <li><a>The Meltdown at Miss Universe</a><span class="dots"></span><span class="pub">The Cut</span></li>
+      <li><a>Outdoor Voices Founder Ty Haney Has Moved On. Mostly.</a><span class="dots"></span><span class="pub">The Cut</span></li>
+      <li><a>Into the Dollhouse</a><span class="dots"></span><span class="pub">The Cut · Cover</span></li>
+      <li><a>The Couple Behind the Skims-Industrial Complex</a><span class="dots"></span><span class="pub">The Cut</span></li>
+      <li><a>Sam Jay Is Still Figuring It Out</a><span class="dots"></span><span class="pub">The Cut</span></li>
+    </ol>
+    <h2>Speaking</h2>
+    <ol>
+      <li><a>Do Dating Apps Really Want You to Find Love?</a><span class="dots"></span><span class="pub">Offline with Jon Favreau</span></li>
+      <li><a>How dating apps are more and more “gamified”</a><span class="dots"></span><span class="pub">Marketplace</span></li>
+      <li><a>Sex and dating in the pandemic</a><span class="dots"></span><span class="pub">NPR</span></li>
+    </ol>
+    <h2>Projects</h2>
+    <ol>
+      <li><a>Land of the Giants: Dating Games</a><span class="dots"></span><span class="pub">Vox · The Verge</span></li>
+      <li><a>En Plein Air</a><span class="dots"></span><span class="pub">Substack</span></li>
+      <li><a>The Big Business of Immortality</a><span class="dots"></span><span class="pub">Quartz</span></li>
+    </ol>
+    <p class="note">Hover any title to read its one-line summary.</p>
+  </section>
+
+  <footer><span>© Sangeeta Singh-Kurtz</span><span>Tokyo · New York</span></footer>
+</div>
+<div class="badge">8 · CONTENTS</div>
+</body></html>
