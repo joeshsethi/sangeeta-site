@@ -1,4 +1,5 @@
 import { pubFromUrl } from "../pub.js";
+import Rich from "./Rich.jsx";
 
 export default function IndexList({ items, start = 1 }) {
   return (
@@ -9,7 +10,7 @@ export default function IndexList({ items, start = 1 }) {
             <span className="index__n">{String(start + i).padStart(2, "0")}</span>
             <div>
               <h3 className="index__title">{it.title}</h3>
-              {it.blurb && <p className="index__dek">{it.blurb}</p>}
+              {it.blurb && <p className="index__dek"><Rich text={it.blurb} /></p>}
             </div>
             <span className="index__pub">{it.pub || pubFromUrl(it.url)}</span>
           </a>

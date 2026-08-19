@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { site } from "../content.jsx";
+import { site, contact } from "../content.js";
 import Masthead from "../components/Masthead.jsx";
 
 export default function Contact() {
@@ -37,10 +37,10 @@ export default function Contact() {
 
   return (
     <>
-      <Masthead page title="Contact" left="Editors · Producers · Readers" right="Tokyo · New York" />
+      <Masthead page title="Contact" left={contact.mastheadLeft} right={contact.mastheadRight} />
       <section className="contact">
         <div className="contact__aside">
-          <p>For commissions, speaking, and press, send a note — she reads everything.</p>
+          <p>{contact.intro}</p>
           <span className="label">
             Elsewhere ·{" "}
             <a href={site.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>{" "}

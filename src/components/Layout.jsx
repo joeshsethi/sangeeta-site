@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
-import { site, nav } from "../content.jsx";
+import { site, nav } from "../content.js";
 
 const titles = {
   "/": null,
@@ -23,7 +23,7 @@ export default function Layout() {
     <>
       <header className="site-header">
         <Link to="/" className="site-header__brand">
-          <b>{site.name}</b> · {site.tagline} · Tokyo
+          <b>{site.name}</b> · {site.tagline}{site.location ? ` · ${site.location}` : ""}
         </Link>
         <nav className="site-nav" aria-label="Main">
           {nav.map((n) => (

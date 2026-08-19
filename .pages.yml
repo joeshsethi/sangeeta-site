@@ -1,0 +1,217 @@
+# Pages CMS configuration — https://pagescms.org/docs/configuration
+# Defines the editing UI for content/*.json. Edit via https://app.pagescms.org
+
+media:
+  input: public/images
+  output: /images
+  extensions: [jpg, jpeg, png, webp, gif, svg]
+
+content:
+  - name: about
+    label: About (Home page)
+    type: file
+    path: content/about.json
+    fields:
+      - name: lede
+        label: Bio — main sentence
+        type: text
+        description: "Big opening line. Use [link text](https://url) for a link."
+        required: true
+      - name: dek
+        label: Bio — second line
+        type: text
+      - name: photo
+        label: Portrait
+        type: image
+        required: true
+      - name: photoCreditName
+        label: Photo credit — name
+        type: string
+      - name: photoCreditUrl
+        label: Photo credit — link
+        type: string
+        pattern:
+          regex: "^https?://.+"
+          message: "Must be a full URL starting with http:// or https://"
+      - name: mastheadLeft
+        label: Small label under name (left)
+        type: string
+      - name: mastheadRight
+        label: Small label under name (right)
+        type: string
+      - name: selectedCount
+        label: How many "Selected Work" pieces to show on the home page
+        type: number
+        options: { min: 1, max: 6 }
+
+  - name: work
+    label: Work
+    type: file
+    path: content/work.json
+    fields:
+      - name: sections
+        label: Sections
+        type: object
+        list: true
+        fields:
+          - name: heading
+            label: Section heading
+            type: string
+            required: true
+          - name: items
+            label: Articles
+            type: object
+            list: true
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: blurb
+                label: One-line blurb
+                type: text
+                description: "Wrap a word in *asterisks* for italics."
+              - name: url
+                label: Link to the article
+                type: string
+                required: true
+                pattern:
+                  regex: "^https?://.+"
+                  message: "Must be a full URL starting with http:// or https://"
+              - name: pub
+                label: Publication (optional — auto-detected from the link if blank)
+                type: string
+      - name: clips
+        label: Magazine clippings (In Print strip)
+        type: image
+        list: true
+      - name: mastheadLeft
+        label: Small label under heading (left)
+        type: string
+      - name: mastheadRight
+        label: Small label under heading (right)
+        type: string
+
+  - name: speaking
+    label: Speaking
+    type: file
+    path: content/speaking.json
+    fields:
+      - name: heading
+        label: Page subtitle
+        type: string
+      - name: photo
+        label: Header photo
+        type: image
+      - name: photoAlt
+        label: Header photo description (for accessibility)
+        type: string
+      - name: items
+        label: Talks & media
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: Title
+            type: string
+            required: true
+          - name: pub
+            label: Outlet / show
+            type: string
+            required: true
+          - name: url
+            label: Link
+            type: string
+            required: true
+            pattern:
+              regex: "^https?://.+"
+              message: "Must be a full URL starting with http:// or https://"
+          - name: blurb
+            label: Optional note
+            type: text
+      - name: mastheadRight
+        label: Small label under heading (right)
+        type: string
+
+  - name: projects
+    label: Projects
+    type: file
+    path: content/projects.json
+    fields:
+      - name: heading
+        label: Page subtitle
+        type: string
+      - name: photo
+        label: Header photo
+        type: image
+      - name: photoAlt
+        label: Header photo description (for accessibility)
+        type: string
+      - name: items
+        label: Projects
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: Title
+            type: string
+            required: true
+          - name: pub
+            label: Outlet / platform
+            type: string
+          - name: blurb
+            label: Description
+            type: text
+          - name: url
+            label: Link
+            type: string
+            required: true
+            pattern:
+              regex: "^https?://.+"
+              message: "Must be a full URL starting with http:// or https://"
+      - name: mastheadRight
+        label: Small label under heading (right)
+        type: string
+
+  - name: contact
+    label: Contact
+    type: file
+    path: content/contact.json
+    fields:
+      - name: intro
+        label: Intro line
+        type: text
+      - name: mastheadLeft
+        label: Small label under heading (left)
+        type: string
+      - name: mastheadRight
+        label: Small label under heading (right)
+        type: string
+
+  - name: site
+    label: Settings
+    type: file
+    path: content/site.json
+    fields:
+      - name: name
+        label: Name
+        type: string
+        required: true
+      - name: tagline
+        label: Tagline (e.g. Writer)
+        type: string
+      - name: location
+        label: Location (shown in header)
+        type: string
+      - name: instagram
+        label: Instagram URL
+        type: string
+      - name: linkedin
+        label: LinkedIn URL
+        type: string
+      - name: contactEmail
+        label: Contact email (fallback for the form)
+        type: string
+      - name: formEndpoint
+        label: Form endpoint (Formspree URL — leave blank to use email)
+        type: string

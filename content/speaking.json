@@ -1,0 +1,38 @@
+{
+  "heading": "Selected Talks & Media",
+  "mastheadRight": "Panels · Podcasts · Broadcast",
+  "photo": "/images/speaking.webp",
+  "photoAlt": "Sangeeta Singh-Kurtz speaking on stage at TechBBQ 2022",
+  "items": [
+    {
+      "title": "Do Dating Apps Really Want You to Find Love?",
+      "blurb": "",
+      "url": "https://www.youtube.com/watch?v=pgmvPxWDhSA",
+      "pub": "Offline with Jon Favreau"
+    },
+    {
+      "title": "Tinder is reportedly testing a $500 per month subscription plan. Is it worth it?",
+      "blurb": "",
+      "url": "https://www.cnn.com/videos/business/2023/01/19/nightcap-tinder-500-dollar-subscription-clip-orig-nb.cnn",
+      "pub": "CNN"
+    },
+    {
+      "title": "How dating apps are more and more “gamified”",
+      "blurb": "",
+      "url": "https://www.marketplace.org/shows/marketplace-tech/how-dating-apps-are-more-and-more-gamified/",
+      "pub": "Marketplace"
+    },
+    {
+      "title": "Sex and dating in the pandemic",
+      "blurb": "",
+      "url": "https://www.mprnews.org/episode/2020/10/01/davis-how-do-you-date-during-a-pandemic",
+      "pub": "NPR"
+    },
+    {
+      "title": "Mysteries at the Museum",
+      "blurb": "",
+      "url": "https://www.travelchannel.com/shows/mysteries-at-the-museum/episodes/lord-lucan-worlds-greatest-drag-racer-and-missing-caravaggio",
+      "pub": "The Travel Channel"
+    }
+  ]
+}

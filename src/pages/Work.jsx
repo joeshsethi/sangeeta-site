@@ -1,4 +1,4 @@
-import { work } from "../content.jsx";
+import { work } from "../content.js";
 import Masthead from "../components/Masthead.jsx";
 import IndexList from "../components/IndexList.jsx";
 
@@ -6,7 +6,7 @@ export default function Work() {
   let n = 1;
   return (
     <>
-      <Masthead page title="Work" left="Features · Profiles · Investigations" right="The Cut · Vulture · New York" />
+      <Masthead page title="Work" left={work.mastheadLeft} right={work.mastheadRight} />
       {work.sections.map((s) => {
         const start = n;
         n += s.items.length;
@@ -25,7 +25,7 @@ export default function Work() {
           <h2>In Print</h2>
         </div>
         <div className="clips">
-          {work.gallery.map((src, i) => (
+          {(work.clips || []).map((src, i) => (
             <img key={src} src={src} alt={`Published work, clipping ${i + 1}`} loading="lazy" />
           ))}
         </div>
