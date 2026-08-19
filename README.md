@@ -18,8 +18,8 @@ rewrites all routes to `index.html` for client-side routing.
 
 All copy, links, and image paths live in `content/*.json`; images in `public/images/`.
 Non-technical editing is done through [Pages CMS](https://app.pagescms.org) — the schema is
-`.pages.yml`. See `EDITING.md` for the editor's guide. Design mockups from the redesign are in
-`design/mockups/`.
+`.pages.yml`. See `EDITING.md` for the editor's guide. Design mockups are in
+`public/design/mockups/` (live at /design/).
 
 ### Onboarding an editor
 1. They create a GitHub account.
@@ -32,3 +32,5 @@ The form in `src/pages/Contact.jsx` posts to `formEndpoint` in `content/site.jso
 Recommended free option: create a form at https://formspree.io (or https://web3forms.com),
 paste the endpoint URL into `formEndpoint`. If left empty, the form falls back to opening the
 visitor's email client addressed to `contactEmail`.
+
+Rebuild the design-options switcher after editing a mockup: `python3 scripts/build-design-options.py`
