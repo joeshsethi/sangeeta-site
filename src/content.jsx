@@ -3,7 +3,7 @@
 export const site = {
   name: "Sangeeta Singh-Kurtz",
   tagline: "Writer",
-  instagram: "https://www.instagram.com/sangeetaskurtz/",
+  instagram: "https://www.instagram.com/sangeeta.s.kurtz/",
   linkedin: "https://www.linkedin.com/in/sangeeta-singh-kurtz/",
   // Contact form endpoint — see README. Leave empty to fall back to a mailto: link.
   formEndpoint: "",
