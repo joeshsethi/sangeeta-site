@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { site } from "../content.js";
+import { site, contact } from "../content.js";
 
 export default function Contact() {
   const [status, setStatus] = useState({ state: "idle", msg: "" });
@@ -35,7 +35,10 @@ export default function Contact() {
   }
 
   return (
-    <form className="form" onSubmit={onSubmit}>
+    <section className="sheet">
+      <h2>Contact</h2>
+      {contact.intro && <p className="lede">{contact.intro}</p>}
+      <form className="form" onSubmit={onSubmit}>
       <div className="form__row">
         <div className="field">
           <label htmlFor="firstName">First Name <span className="req">(required)</span></label>
@@ -66,6 +69,7 @@ export default function Contact() {
           {status.msg}
         </p>
       )}
-    </form>
+      </form>
+    </section>
   );
 }

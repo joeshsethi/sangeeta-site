@@ -1,16 +1,17 @@
 import { speaking } from "../content.js";
-import LinkList from "../components/LinkList.jsx";
+import Rows from "../components/Rows.jsx";
 
 export default function Speaking() {
   return (
-    <>
-      <h2 className="section-heading">{speaking.heading}</h2>
+    <section className="sheet">
+      <h2>Speaking</h2>
       {speaking.photo && (
-        <div className="hero-photo">
+        <figure className="page-figure" style={{ marginLeft: 0, marginRight: 0 }}>
           <img src={speaking.photo} alt={speaking.photoAlt || ""} width="1500" height="1000" />
-        </div>
+        </figure>
       )}
-      <LinkList items={speaking.items} />
-    </>
+      <h3>{speaking.heading}</h3>
+      <Rows items={speaking.items} />
+    </section>
   );
 }

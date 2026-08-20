@@ -1,20 +1,23 @@
 import { work } from "../content.js";
-import LinkList from "../components/LinkList.jsx";
+import Rows from "../components/Rows.jsx";
 
 export default function Work() {
   return (
-    <>
+    <section className="sheet">
+      <h2>Selected Work</h2>
       {work.sections.map((s) => (
-        <section key={s.heading}>
-          <h2 className="section-heading">{s.heading}</h2>
-          <LinkList items={s.items} />
-        </section>
+        <div key={s.heading}>
+          <h3>{s.heading}</h3>
+          <Rows items={s.items} deks />
+        </div>
       ))}
-      <div className="gallery" aria-label="Selected clips">
-        {(work.clips || []).map((src, i) => (
-          <img key={src} src={src} alt={`Published work ${i + 1}`} loading="lazy" />
-        ))}
-      </div>
-    </>
+      {(work.clips || []).length > 0 && (
+        <div className="clips" aria-label="Selected clips">
+          {work.clips.map((src, i) => (
+            <img key={src} src={src} alt={`Published work, clipping ${i + 1}`} loading="lazy" />
+          ))}
+        </div>
+      )}
+    </section>
   );
 }

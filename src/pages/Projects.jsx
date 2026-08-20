@@ -1,16 +1,17 @@
 import { projects } from "../content.js";
-import LinkList from "../components/LinkList.jsx";
+import Rows from "../components/Rows.jsx";
 
 export default function Projects() {
   return (
-    <>
-      <h2 className="section-heading">{projects.heading}</h2>
+    <section className="sheet">
+      <h2>Projects</h2>
       {projects.photo && (
-        <div className="hero-photo">
+        <figure className="page-figure" style={{ marginLeft: 0, marginRight: 0 }}>
           <img src={projects.photo} alt={projects.photoAlt || ""} width="1500" height="1000" />
-        </div>
+        </figure>
       )}
-      <LinkList items={projects.items} />
-    </>
+      <h3>{projects.heading}</h3>
+      <Rows items={projects.items} deks />
+    </section>
   );
 }
