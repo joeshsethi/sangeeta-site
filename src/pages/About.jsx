@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { site, about } from "../content.js";
+import { site, about, speaking, projects } from "../content.js";
 import Rich from "../components/Rich.jsx";
 import Rows from "../components/Rows.jsx";
 
@@ -32,8 +32,17 @@ export default function About() {
         <section className="sheet">
           <h2>Selected Work</h2>
           <Rows items={about.selected} />
+          <Link className="view-all" to="/work">View all work →</Link>
         </section>
       )}
+      <section className="sheet">
+        <h2>{speaking.heading}</h2>
+        <Rows items={speaking.items} />
+      </section>
+      <section className="sheet">
+        <h2>{projects.heading}</h2>
+        <Rows items={projects.items} />
+      </section>
     </>
   );
 }
