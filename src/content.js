@@ -11,7 +11,5 @@ export { site, about, work, speaking, projects, contact };
 export const nav = [
   { to: "/", label: "About" },
   { to: "/work", label: "Work" },
-  { to: "/speaking", label: "Speaking" },
-  { to: "/projects", label: "Projects" },
   { to: "/contact", label: "Contact" },
 ];
