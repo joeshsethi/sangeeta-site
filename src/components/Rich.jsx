@@ -1,18 +1,22 @@
-// Tiny inline renderer: *italics* and [text](url). Enough for blurbs and the bio.
-const TOKEN = /(\[[^\]]+\]\(https?:\/\/[^)\s]+\)|\*[^*]+\*)/g;
+// Tiny inline renderer: *italics*, [text](url), and *[text](url)* (italic link).
+const TOKEN = /(\*\[[^\]]+\]\(https?:\/\/[^)\s]+\)\*|\[[^\]]+\]\(https?:\/\/[^)\s]+\)|\*[^*]+\*)/g;
+const LINK = /^\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)$/;
 
 export default function Rich({ text = "" }) {
   const parts = String(text).split(TOKEN).filter(Boolean);
   return parts.map((p, i) => {
-    const link = p.match(/^\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)$/);
+    const italic = p.startsWith("*") && p.endsWith("*") && p.length > 2;
+    const inner = italic ? p.slice(1, -1) : p;
+    const link = inner.match(LINK);
     if (link) {
-      return (
+      const a = (
         <a key={i} href={link[2]} target="_blank" rel="noopener noreferrer">
           {link[1]}
         </a>
       );
+      return italic ? <em key={i}>{a}</em> : a;
     }
-    if (p.startsWith("*") && p.endsWith("*") && p.length > 2) return <em key={i}>{p.slice(1, -1)}</em>;
+    if (italic) return <em key={i}>{inner}</em>;
     return p;
   });
 }
