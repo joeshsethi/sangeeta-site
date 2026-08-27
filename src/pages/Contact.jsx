@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { site, contact } from "../content.js";
+import { site } from "../content.js";
 
 export default function Contact() {
   const [status, setStatus] = useState({ state: "idle", msg: "" });
@@ -36,8 +36,6 @@ export default function Contact() {
 
   return (
     <section className="sheet">
-      <h2>Contact</h2>
-      {contact.intro && <p className="lede">{contact.intro}</p>}
       <form className="form" onSubmit={onSubmit}>
       <div className="form__row">
         <div className="field">

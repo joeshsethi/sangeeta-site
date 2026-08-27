@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { site, about } from "../content.js";
 import Rich from "../components/Rich.jsx";
 import Rows from "../components/Rows.jsx";
@@ -22,7 +23,7 @@ export default function About() {
           <p className="lede" key={i}><Rich text={p} /></p>
         ))}
         <p className="links">
-          {site.contactEmail && <a href={`mailto:${site.contactEmail}`}>Contact</a>}
+          <Link to="/contact">Contact</Link>
           <a href={site.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
           <a href={site.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </p>
