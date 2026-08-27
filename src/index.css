@@ -126,10 +126,11 @@ img {
 }
 
 .sheet h3 {
+  font-family: "Pinyon Script", cursive;
   font-weight: 400;
-  font-size: 28px;
+  font-size: 40px;
+  line-height: 1.25;
   margin: 44px 0 12px;
-  font-style: italic;
 }
 
 .sheet .lede {
