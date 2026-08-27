@@ -24,10 +24,7 @@ export default function Layout() {
         <Outlet />
       </main>
       <footer className="site-footer">
-        © {new Date().getFullYear()} {site.name} &nbsp;·&nbsp;{" "}
-        <a href={site.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
-        {" "}&nbsp;·&nbsp;{" "}
-        <a href={site.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        © {new Date().getFullYear()} {site.name}
       </footer>
     </>
   );

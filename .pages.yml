@@ -12,14 +12,11 @@ content:
     type: file
     path: content/about.json
     fields:
-      - name: lede
-        label: Bio — main sentence
+      - name: bio
+        label: Bio paragraphs
         type: text
-        description: "Big opening line. Use [link text](https://url) for a link."
-        required: true
-      - name: dek
-        label: Bio — second line
-        type: text
+        list: true
+        description: "One box per paragraph. Use [link text](https://url) for a link, *word* for italics."
       - name: photo
         label: Portrait
         type: image
@@ -39,10 +36,25 @@ content:
       - name: mastheadRight
         label: Small label under name (right)
         type: string
-      - name: selectedCount
-        label: How many "Selected Work" pieces to show on the home page
-        type: number
-        options: { min: 1, max: 6 }
+      - name: selected
+        label: Selected Work (home page list)
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: Title
+            type: string
+            required: true
+          - name: url
+            label: Link
+            type: string
+            required: true
+            pattern:
+              regex: "^https?://.+"
+              message: "Must be a full URL starting with http:// or https://"
+          - name: pub
+            label: Publication
+            type: string
 
   - name: work
     label: Work

@@ -1,10 +1,29 @@
 {
   "mastheadLeft": "Features · Profiles · Investigations",
   "mastheadRight": "Formerly New York Magazine",
-  "lede": "A freelance journalist who investigates intriguing people. She was a staff writer at [New York Magazine](https://nymag.com/) for five years.",
-  "dek": "She lives in Tokyo, where she recently completed her debut novel.",
   "photo": "/images/about.webp",
   "photoCreditName": "Nicholas Takahashi",
   "photoCreditUrl": "https://www.instagram.com/ntakahashi217",
-  "selectedCount": 3
+  "bio": [
+    "Sangeeta Singh-Kurtz is a fiction writer and freelance journalist. She was a staff writer at [New York Magazine](https://nymag.com/) for five years, where she was the first to report on intriguing communities that have since been covered to death. She also wrote stories about wealth, aspiration, and powerful idiots, hosted an award-winning business podcast with Vox and The Verge, authored and illustrated a series of swashbuckling travelogues on Substack.",
+    "She began her career in local news before joining the business publication Quartz, and has written for Architectural Digest, Marie Claire, A24, and more. She lives in Tokyo, where she recently completed her debut novel, which she would describe as “if Patricia Highsmith did Eat Pray Love.” Her short story The Cicada was nominated for Nimrod International’s Katherine Anne Porter Prize and is currently being developed into a short film.",
+    "In her free time she toils at Japanese, yoga, and horseback archery, which she practices in China and Mongolia."
+  ],
+  "selected": [
+    {
+      "title": "At Thailand’s Real White Lotus Hotel, Where the Ultrarich Get Coddled",
+      "url": "https://www.vulture.com/article/white-lotus-thailand-hotel-four-seasons-koh-samui.html",
+      "pub": "New York Magazine"
+    },
+    {
+      "title": "The Meltdown At Miss Universe",
+      "url": "https://www.thecut.com/article/first-miss-palestine-nadeen-ayoub-interview.html",
+      "pub": "New York Magazine"
+    },
+    {
+      "title": "The Couple Behind the Skims-Industrial Complex",
+      "url": "https://www.thecut.com/article/emma-grede-jens-grede-kim-kardashian-skims-kylie-jenner-khy-profile.html",
+      "pub": "New York Magazine"
+    }
+  ]
 }
