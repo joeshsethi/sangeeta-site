@@ -357,9 +357,6 @@ img {
   .site-nav {
     padding: 18px var(--gutter);
     font-size: 16px;
-    flex-wrap: wrap;
-    gap: 8px 16px;
-    justify-content: flex-start;
   }
 
   .hero {
