@@ -30,17 +30,17 @@ export default function About() {
       </section>
       {(about.selected || []).length > 0 && (
         <section className="sheet">
-          <h2>Selected Work</h2>
+          <h2 className="script-a">Selected Work</h2>
           <Rows items={about.selected} />
           <Link className="view-all" to="/work">View all work →</Link>
         </section>
       )}
       <section className="sheet">
-        <h2>{speaking.heading}</h2>
+        <h2 className="script-b">{speaking.heading}</h2>
         <Rows items={speaking.items} />
       </section>
       <section className="sheet">
-        <h2>{projects.heading}</h2>
+        <h2 className="script-c">{projects.heading}</h2>
         <Rows items={projects.items} />
       </section>
     </>

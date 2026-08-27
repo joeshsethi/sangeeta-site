@@ -158,6 +158,25 @@ img {
   color: var(--mute);
 }
 
+/* Script heading trials — she picks one, then all three headings get that face. */
+.sheet h2.script-a {
+  font-family: "Monsieur La Doulaise", cursive;
+  font-size: 64px;
+  line-height: 1.15;
+}
+
+.sheet h2.script-b {
+  font-family: "Herr Von Muellerhoff", cursive;
+  font-size: 66px;
+  line-height: 1.1;
+}
+
+.sheet h2.script-c {
+  font-family: "Pinyon Script", cursive;
+  font-size: 54px;
+  line-height: 1.25;
+}
+
 /* ---------- Work rows ---------- */
 
 .rows {
@@ -382,6 +401,15 @@ img {
 
   .sheet h2 {
     font-size: 34px;
+  }
+
+  .sheet h2.script-a,
+  .sheet h2.script-b {
+    font-size: 44px;
+  }
+
+  .sheet h2.script-c {
+    font-size: 38px;
   }
 
   .sheet .lede {
