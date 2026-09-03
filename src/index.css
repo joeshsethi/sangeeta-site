@@ -7,7 +7,7 @@
   --serif: "Newsreader", Georgia, "Times New Roman", serif;
   --display: "Pirata One", "Old English Text MT", serif;
   --gutter: 48px;
-  --photo-ratio: 0.775; /* width / height of the source portrait */
+  --photo-ratio: 0.7737; /* width / height of the source portrait */
 }
 
 *,
@@ -76,15 +76,15 @@ img {
   height: min(calc(276px + 45vw), 64vh);
   max-height: calc((100vw - 2 * var(--gutter)) / var(--photo-ratio));
   object-fit: cover;
-  object-position: 50% 34%;
-  filter: grayscale(1) contrast(1.05) brightness(0.92);
+  object-position: 50% 100%;
+  filter: brightness(0.97);
 }
 
 .hero h1 {
   position: absolute;
   left: 50%;
-  top: 62%;
-  transform: translate(-50%, -50%);
+  bottom: 5%;
+  transform: translateX(-50%);
   margin: 0;
   font-family: var(--display);
   font-weight: 400;
