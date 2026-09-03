@@ -7,6 +7,7 @@
   --serif: "Newsreader", Georgia, "Times New Roman", serif;
   --display: "Pirata One", "Old English Text MT", serif;
   --gutter: 48px;
+  --photo-ratio: 0.775; /* width / height of the source portrait */
 }
 
 *,
@@ -63,15 +64,19 @@ img {
 
 .hero {
   position: relative;
-  margin: 70px var(--gutter) 0;
+  margin: 40px var(--gutter) 0;
 }
 
+/* The frame's height grows fluidly as the window narrows, so the photo
+   un-crops from a wide landscape toward its full portrait — no breakpoint
+   jump. Capped at 72vh so the bio always peeks below the fold, and never
+   taller than the source's own ratio so the sides are never cropped. */
 .hero img {
   width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 11;
+  height: min(calc(276px + 45vw), 64vh);
+  max-height: calc((100vw - 2 * var(--gutter)) / var(--photo-ratio));
   object-fit: cover;
-  object-position: 60% 40%;
+  object-position: 50% 34%;
   filter: grayscale(1) contrast(1.05) brightness(0.92);
 }
 
@@ -97,6 +102,11 @@ img {
   color: var(--mute);
   text-align: right;
   font-style: italic;
+}
+
+/* First section sits close under the photo so the bio peeks above the fold. */
+.hero-credit + .sheet {
+  margin-top: 56px;
 }
 
 .hero-credit a {
@@ -360,11 +370,7 @@ img {
   }
 
   .hero {
-    margin-top: 30px;
-  }
-
-  .hero img {
-    aspect-ratio: 4 / 5;
+    margin-top: 24px;
   }
 
   .hero h1 {
