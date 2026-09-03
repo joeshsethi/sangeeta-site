@@ -7,7 +7,7 @@ export default function Work() {
       {work.sections.map((s) => (
         <div key={s.heading}>
           <h3>{s.heading}</h3>
-          <Rows items={s.items} deks />
+          <Rows items={s.items} deks pubs={false} />
         </div>
       ))}
       {(work.clips || []).length > 0 && (
