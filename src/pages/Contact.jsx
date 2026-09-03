@@ -39,24 +39,24 @@ export default function Contact() {
       <form className="form" onSubmit={onSubmit}>
       <div className="form__row">
         <div className="field">
-          <label htmlFor="firstName">First Name <span className="req">(required)</span></label>
+          <label htmlFor="firstName">First Name</label>
           <input id="firstName" name="firstName" autoComplete="given-name" required />
         </div>
         <div className="field">
-          <label htmlFor="lastName">Last Name <span className="req">(required)</span></label>
+          <label htmlFor="lastName">Last Name</label>
           <input id="lastName" name="lastName" autoComplete="family-name" required />
         </div>
       </div>
       <div className="field">
-        <label htmlFor="email">Email <span className="req">(required)</span></label>
+        <label htmlFor="email">Email</label>
         <input id="email" name="email" type="email" autoComplete="email" required />
       </div>
       <div className="field">
-        <label htmlFor="subject">Subject <span className="req">(required)</span></label>
+        <label htmlFor="subject">Subject</label>
         <input id="subject" name="subject" required />
       </div>
       <div className="field">
-        <label htmlFor="message">Message <span className="req">(required)</span></label>
+        <label htmlFor="message">Message</label>
         <textarea id="message" name="message" required />
       </div>
       <button className="btn" type="submit" disabled={status.state === "sending"}>
