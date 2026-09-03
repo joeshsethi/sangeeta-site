@@ -1,9 +1,9 @@
 :root {
-  --bg: #ADEBB3;
+  --bg: #fff;
   --ink: #000;
-  --mute: #4c5a4e;
-  --faint: #4f5d51;
-  --rule: #93cf99;
+  --mute: #666;
+  --faint: #999;
+  --rule: #eee;
   --serif: "Newsreader", Georgia, "Times New Roman", serif;
   --display: "Pirata One", "Old English Text MT", serif;
   --gutter: 48px;
