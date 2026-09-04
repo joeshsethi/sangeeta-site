@@ -4,9 +4,8 @@ import about from "../content/about.json";
 import work from "../content/work.json";
 import speaking from "../content/speaking.json";
 import projects from "../content/projects.json";
-import contact from "../content/contact.json";
 
-export { site, about, work, speaking, projects, contact };
+export { site, about, work, speaking, projects };
 
 export const nav = [
   { to: "/", label: "About" },

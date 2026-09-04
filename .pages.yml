@@ -1,5 +1,6 @@
 # Pages CMS configuration — https://pagescms.org/docs/configuration
-# Defines the editing UI for content/*.json. Edit via https://app.pagescms.org
+# This defines the editing screens at https://app.pagescms.org
+# Every field here maps to a real part of the live site.
 
 media:
   input: public/images
@@ -8,38 +9,34 @@ media:
 
 content:
   - name: about
-    label: About (Home page)
+    label: Home page
     type: file
     path: content/about.json
     fields:
-      - name: bio
-        label: Bio paragraphs
-        type: text
-        list: true
-        description: "One box per paragraph. Use [link text](https://url) for a link, *word* for italics."
       - name: photo
-        label: Portrait
+        label: Main photo
         type: image
         required: true
+        description: "The large photo at the top. Landscape or portrait both work."
       - name: photoCreditName
-        label: Photo credit — name
+        label: Photo credit — photographer's name
         type: string
       - name: photoCreditUrl
-        label: Photo credit — link
+        label: Photo credit — link to their site
         type: string
         pattern:
           regex: "^https?://.+"
-          message: "Must be a full URL starting with http:// or https://"
-      - name: mastheadLeft
-        label: Small label under name (left)
-        type: string
-      - name: mastheadRight
-        label: Small label under name (right)
-        type: string
+          message: "Must be a full web address starting with https://"
+      - name: bio
+        label: Bio
+        type: text
+        list: true
+        description: "One box per paragraph. For a link write [the words](https://the-address). For italics put *asterisks* around the words."
       - name: selected
-        label: Selected Work (home page list)
+        label: "\"Work\" list on the home page"
         type: object
         list: true
+        description: "The short list of highlights. The full list lives on the Work page."
         fields:
           - name: title
             label: Title
@@ -51,13 +48,13 @@ content:
             required: true
             pattern:
               regex: "^https?://.+"
-              message: "Must be a full URL starting with http:// or https://"
+              message: "Must be a full web address starting with https://"
           - name: pub
             label: Publication
             type: string
 
   - name: work
-    label: Work
+    label: Work page
     type: file
     path: content/work.json
     fields:
@@ -65,6 +62,7 @@ content:
         label: Sections
         type: object
         list: true
+        description: "Each section has a heading and its own list of articles."
         fields:
           - name: heading
             label: Section heading
@@ -80,46 +78,35 @@ content:
                 type: string
                 required: true
               - name: blurb
-                label: One-line blurb
+                label: One-line description
                 type: text
-                description: "Wrap a word in *asterisks* for italics."
+                description: "Put *asterisks* around words for italics."
               - name: url
-                label: Link to the article
+                label: Link
                 type: string
                 required: true
                 pattern:
                   regex: "^https?://.+"
-                  message: "Must be a full URL starting with http:// or https://"
+                  message: "Must be a full web address starting with https://"
               - name: pub
-                label: Publication (optional — auto-detected from the link if blank)
+                label: Publication (not shown on the Work page)
                 type: string
       - name: clips
-        label: Magazine clippings (In Print strip)
+        label: Magazine clippings
         type: image
         list: true
-      - name: mastheadLeft
-        label: Small label under heading (left)
-        type: string
-      - name: mastheadRight
-        label: Small label under heading (right)
-        type: string
+        description: "The row of images at the bottom of the Work page."
 
   - name: speaking
-    label: Speaking
+    label: "\"Talks & Media\" (home page)"
     type: file
     path: content/speaking.json
     fields:
       - name: heading
-        label: Page subtitle
-        type: string
-      - name: photo
-        label: Header photo
-        type: image
-      - name: photoAlt
-        label: Header photo description (for accessibility)
+        label: Heading
         type: string
       - name: items
-        label: Talks & media
+        label: Talks & appearances
         type: object
         list: true
         fields:
@@ -128,7 +115,7 @@ content:
             type: string
             required: true
           - name: pub
-            label: Outlet / show
+            label: Outlet or show
             type: string
             required: true
           - name: url
@@ -137,27 +124,21 @@ content:
             required: true
             pattern:
               regex: "^https?://.+"
-              message: "Must be a full URL starting with http:// or https://"
-          - name: blurb
-            label: Optional note
-            type: text
-      - name: mastheadRight
-        label: Small label under heading (right)
+              message: "Must be a full web address starting with https://"
+      - name: photo
+        label: Photo (only shown on the separate /speaking page)
+        type: image
+      - name: photoAlt
+        label: Photo description, for screen readers
         type: string
 
   - name: projects
-    label: Projects
+    label: "\"Projects, Podcasts, & Newsletters\" (home page)"
     type: file
     path: content/projects.json
     fields:
       - name: heading
-        label: Page subtitle
-        type: string
-      - name: photo
-        label: Header photo
-        type: image
-      - name: photoAlt
-        label: Header photo description (for accessibility)
+        label: Heading
         type: string
       - name: items
         label: Projects
@@ -169,35 +150,23 @@ content:
             type: string
             required: true
           - name: pub
-            label: Outlet / platform
+            label: Outlet or platform
             type: string
-          - name: blurb
-            label: Description
-            type: text
           - name: url
             label: Link
             type: string
             required: true
             pattern:
               regex: "^https?://.+"
-              message: "Must be a full URL starting with http:// or https://"
-      - name: mastheadRight
-        label: Small label under heading (right)
-        type: string
-
-  - name: contact
-    label: Contact
-    type: file
-    path: content/contact.json
-    fields:
-      - name: intro
-        label: Intro line
-        type: text
-      - name: mastheadLeft
-        label: Small label under heading (left)
-        type: string
-      - name: mastheadRight
-        label: Small label under heading (right)
+              message: "Must be a full web address starting with https://"
+          - name: blurb
+            label: Description (not shown on the home page)
+            type: text
+      - name: photo
+        label: Photo (only shown on the separate /projects page)
+        type: image
+      - name: photoAlt
+        label: Photo description, for screen readers
         type: string
 
   - name: site
@@ -210,20 +179,19 @@ content:
         type: string
         required: true
       - name: tagline
-        label: Tagline (e.g. Writer)
+        label: Tagline
         type: string
-      - name: location
-        label: Location (shown in header)
-        type: string
+        description: "Only used in the browser tab title."
       - name: instagram
-        label: Instagram URL
+        label: Instagram address
         type: string
       - name: linkedin
-        label: LinkedIn URL
+        label: LinkedIn address
         type: string
       - name: contactEmail
-        label: Contact email (fallback for the form)
+        label: Contact email
         type: string
       - name: formEndpoint
-        label: Form endpoint (Formspree URL — leave blank to use email)
+        label: Contact form address (Formspree)
         type: string
+        description: "Leave as is unless the contact form is being moved somewhere else."
