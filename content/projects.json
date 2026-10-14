@@ -1,25 +1,24 @@
 {
   "heading": "Projects, Podcasts, & Newsletters",
-  "photo": "/images/projects.webp",
-  "photoAlt": "Land of the Giants: Dating Games, podcast artwork",
   "items": [
     {
       "title": "Land of the Giants",
-      "blurb": "Host of the award-winning narrative podcast series about influential tech companies. The six-episode season focused on the billion-dollar dating app industry. The season won an Adweek Audio Award for best new technology podcast.",
+      "pub": "Vox and The Verge",
       "url": "https://podcasts.apple.com/us/podcast/land-of-the-giants/id1465767420",
-      "pub": "Vox and The Verge"
+      "blurb": "Host of the award-winning narrative podcast series about influential tech companies. The six-episode season focused on the billion-dollar dating app industry. The season won an Adweek Audio Award for best new technology podcast."
     },
     {
       "title": "En Plein Air",
-      "blurb": "A one year newsletter pop-up, intimate narrative travelogues.",
+      "pub": "Substack",
       "url": "https://pleinair.substack.com/",
-      "pub": "Substack"
+      "blurb": "A one year newsletter pop-up, intimate narrative travelogues."
     },
     {
       "title": "The Big Business of Immortality",
-      "blurb": "Once upon a time I spoke to 100 people who think humans can live forever.",
+      "pub": "Quartz",
       "url": "https://qz.com/1578796/why-silicon-valley-titans-are-obsessed-with-immortality",
-      "pub": "Quartz"
+      "blurb": "Once upon a time I spoke to 100 people who think humans can live forever."
     }
-  ]
+  ],
+  "photoAlt": "Land of the Giants: Dating Games, podcast artwork"
 }
