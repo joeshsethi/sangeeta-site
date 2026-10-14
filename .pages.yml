@@ -125,12 +125,6 @@ content:
             pattern:
               regex: "^https?://.+"
               message: "Must be a full web address starting with https://"
-      - name: photo
-        label: Photo (only shown on the separate /speaking page)
-        type: image
-      - name: photoAlt
-        label: Photo description, for screen readers
-        type: string
 
   - name: projects
     label: "\"Projects, Podcasts, & Newsletters\" (home page)"
@@ -162,12 +156,6 @@ content:
           - name: blurb
             label: Description (not shown on the home page)
             type: text
-      - name: photo
-        label: Photo (only shown on the separate /projects page)
-        type: image
-      - name: photoAlt
-        label: Photo description, for screen readers
-        type: string
 
   - name: site
     label: Settings
