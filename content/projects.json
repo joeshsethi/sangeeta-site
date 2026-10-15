@@ -1,23 +1,20 @@
 {
-  "heading": "Projects, Podcasts, & Newsletters",
+  "heading": "Projects",
   "items": [
     {
-      "title": "Land of the Giants",
+      "title": "Land of the Giants - Award-winning podcast series about influential tech companies.",
       "pub": "Vox and The Verge",
-      "url": "https://podcasts.apple.com/us/podcast/land-of-the-giants/id1465767420",
-      "blurb": "Award-winning podcast series about influential tech companies. This season focused on the billion-dollar dating app industry and won an Adweek Audio Award for best new technology podcast."
+      "url": "https://podcasts.apple.com/us/podcast/land-of-the-giants/id1465767420"
     },
     {
-      "title": "En Plein Air",
+      "title": "En Plein Air - Intimate narrative travelogues.",
       "pub": "Substack",
-      "url": "https://pleinair.substack.com/",
-      "blurb": "Intimate narrative travelogues."
+      "url": "https://pleinair.substack.com/"
     },
     {
-      "title": "The Big Business of Immortality",
+      "title": "The Big Business of Immortality — When I spoke to 100 people who think humans can live forever.",
       "pub": "Quartz",
-      "url": "https://qz.com/1578796/why-silicon-valley-titans-are-obsessed-with-immortality",
-      "blurb": "I spoke to 100 people who think humans can live forever."
+      "url": "https://qz.com/1578796/why-silicon-valley-titans-are-obsessed-with-immortality"
     }
   ]
 }
