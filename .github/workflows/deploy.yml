@@ -1,0 +1,24 @@
+# Vercel's Hobby plan won't build commits authored by non-owners (e.g. edits
+# saved from Pages CMS by a collaborator). This triggers the build ourselves
+# via a deploy hook, which has no author check.
+name: Deploy to Vercel
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Vercel deployment
+        env:
+          HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: |
+          if [ -z "$HOOK" ]; then
+            echo "VERCEL_DEPLOY_HOOK secret is not set yet — skipping."
+            exit 0
+          fi
+          curl -fsSL -X POST "$HOOK" -o /dev/null
+          echo "Deployment triggered."
